@@ -4,8 +4,8 @@ resource "aws_instance" "server" {
   instance_type          = var.instance_type
   availability_zone      = var.az
   subnet_id              = var.subnet_id
-  vpc_security_group_ids = [var.sg-id]
-  key_name               = aws_key_pair.max_keypair.key_name
+  //vpc_security_group_ids = [var.sg-id]
+ // key_name               = aws_key_pair.max_keypair.key_name
   user_data              = file("setup.sh")
   tags = {
     Name       = "terraform-ec2-instance"
